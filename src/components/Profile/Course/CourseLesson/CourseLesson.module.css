@@ -1,0 +1,56 @@
+.container{
+	position: absolute;
+	width: calc(100% - 300px);
+}
+.container h1{
+	text-align: center;
+}
+.container a{
+	text-decoration: none;
+	position: absolute;
+	top: 20px;
+}
+.container a div{
+	padding: 5px 7px;
+
+	border: 1px solid #000;
+	font-size: 22px;
+	width: 100px;
+	text-align: center;
+	background: rgb(85,75,75);
+	background: linear-gradient(142deg, rgba(85,75,75,1) 0%, rgba(74,72,72,1) 35%, rgba(69,57,57,1) 60%, rgba(62,48,48,1) 100%);
+	color: #fff;
+}
+.container a div i{
+	padding-right: 10px;
+}
+.chooseStep{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.chooseStep div{
+	background: rgb(187,212,206);
+	background: linear-gradient(142deg, rgb(199, 226, 220) 0%, rgb(154, 183, 176) 35%, rgb(166, 192, 188) 60%, rgb(197, 219, 213) 100%);
+	font-size: 22px;
+	padding: 20px;
+	margin: 0 10px;
+	width: 200px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid #000;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.startTestBtn{
+	text-align: center;
+	margin-bottom: 30px;
+
+}
+.startTestBtn button{
+	font-size: 22px;
+	padding: 10px 20px;
+	cursor: pointer;
+}

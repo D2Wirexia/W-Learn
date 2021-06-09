@@ -1,0 +1,50 @@
+.container{
+	background: rgb(87,193,241);
+	background: linear-gradient(142deg, rgba(87,193,241,1) 0%, rgba(46,142,185,1) 32%, rgba(72,164,205,1) 77%, rgba(49,144,186,1) 100%);
+	position: absolute;
+	left: 460px;
+	width: calc(100% - 500px);
+	height: calc(100vh - 302px);
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.simpleMessage{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 5px;
+}
+
+.sender{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 10px;
+}
+.recipient{
+	display: flex;
+	justify-content: start;
+}
+.text{
+	max-width: 400px;
+	min-width: 100px;
+	border: 1px solid #000;
+	background: #fff;
+	padding: 5px 15px;
+	border-radius: 40px;
+}
+.inputSendMessage{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	position: absolute;
+	bottom: 10px;
+}
+.inputSendMessage textarea{
+	width: 100%;
+	resize: none;
+}
+.inputSendMessage button{
+	width: 100px;
+}

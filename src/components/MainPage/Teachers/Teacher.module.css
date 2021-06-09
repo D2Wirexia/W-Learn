@@ -1,0 +1,67 @@
+.container{
+	background: #f8f8f8;
+}
+.title {
+	position: relative;
+	margin-bottom: .5rem;
+	text-align: center;
+}
+.title h1 {
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	padding: .5rem 1.5rem;
+	border: .125rem solid #6a1b9a;
+	background: #6a1b9a;
+	color: #fff;
+}
+.items{
+	display: flex;
+	width: 950px;
+	justify-content: space-between;
+	margin: 40px auto 0;
+}
+.presentationPhoto{
+	height: 80vh;
+}
+.presentationPhoto img{
+	height: 100%;
+}
+.detailsInfo{
+	position: relative;
+	top: 100px
+}
+.name{
+	font-weight: 700;
+	font-size: 30px;
+	margin-top: 15px;
+	text-align: center;
+}
+.age{
+	font-size: 20px;
+	font-style: italic;
+	margin-top: 10px;
+	text-align: center;
+}
+.teaching{
+	font-size: 24px;
+	font-family: sans-serif;
+	margin-top: 20px;
+	white-space: nowrap;
+	text-align: center;
+}
+.aboutMe{
+	text-align: start;
+	font-size: 26px;
+	margin-left: -25px;
+}
+.aboutMe ul{
+	font-weight: 700;
+}
+.aboutMe ul li{
+	font-weight: 400;
+	font-size: 22px;
+	padding: 3px;
+	margin-left: 25px;
+}

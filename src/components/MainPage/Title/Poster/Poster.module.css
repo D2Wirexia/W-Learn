@@ -1,0 +1,49 @@
+.container{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	left: 50%;
+	top: 42%;
+	transform: translate(-50%, -50%);
+	margin: 0 auto;
+}
+.tagline{
+	color: #fff;
+	width: 700px;
+	margin-top: 100px;
+}
+.tagline h1{
+	padding-left: 50px;
+}
+.tagline h1 span{
+	color: red;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.goTest_btn{
+	position: relative;
+	top: 100px;
+	left: 30%;
+}
+.goTest_btn button{
+	background: #D1FDFF;
+	font-style: italic;
+	padding: 10px 20px;
+	font-size: 22px;
+	font-family: "Times New Roman", sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 1px 1px 5px #fff;
+	transition: .2s all linear;
+}
+.goTest_btn button:hover{
+	background: #ffedad;
+	box-shadow: 1px 1px 15px #fff;
+}
+.banner{
+	width: 500px;
+
+}
+.banner img{
+	width: 100%;
+}

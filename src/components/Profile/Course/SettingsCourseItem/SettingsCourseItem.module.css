@@ -1,0 +1,115 @@
+.container{
+	margin: 0 50px;
+	position: absolute;
+	width: calc(100% - 300px);
+}
+.arrBtnNav{
+	display: flex;
+	margin-top: 20px;
+	justify-content: center;
+}
+.container > a{
+	text-decoration: none;
+	position: absolute;
+	top: 15px;
+	left: -50px;
+}
+.container a div{
+	padding: 5px 7px;
+	border: 1px solid #000;
+	font-size: 22px;
+	width: 100px;
+	text-align: center;
+	background: rgb(85,75,75);
+	background: linear-gradient(142deg, rgba(85,75,75,1) 0%, rgba(74,72,72,1) 35%, rgba(69,57,57,1) 60%, rgba(62,48,48,1) 100%);
+	color: #fff;
+}
+.container a div i{
+	padding-right: 10px;
+}
+.btnNav{
+	margin: 0 10px;
+}
+.btnNav button{
+	font-size: 18px;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+.title{
+	margin-top: 20px;
+	font-size: 22px;
+	font-weight: 600;
+	padding: 5px;
+	text-align: center;
+}
+.title input{
+	margin-left: 10px;
+	font-size: 22px;
+}
+.linkBlock{
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	width: 650px;
+}
+.leftPosition{
+	margin: 20px auto;
+	background: rgb(255,255,255);
+	background: linear-gradient(142deg, rgba(255,255,255,1) 0%, rgba(255,214,147,1) 15%, rgba(226,156,65,1) 35%, rgba(213,139,61,1) 48%, rgba(219,134,43,1) 60%, rgba(254,220,152,1) 83%, rgba(255,255,255,1) 100%);
+	box-shadow: 1px 1px 3px #000, -1px -1px 3px #000;
+	padding: 20px;
+}
+.itemLinkBlock{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+}
+.itemLinkBlock span{
+	font-family: "Times New Roman";
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+}
+.itemLinkBlock i{
+	color: #000;
+	font-size: 20px;
+}
+.itemLinkBlock input:first-child{
+	width: 100px;
+}
+.itemLinkBlock input{
+	margin: 0 20px;
+	width: 400px;
+
+}
+.rightPosition{
+	height: 100px;
+	width: 50px;
+}
+.rightPosition button{
+	text-align: center;
+	height: 50%;
+	width: 50px;
+	border-radius: 50%;
+	margin: 10px 0;
+	cursor: pointer;
+}
+.rightPosition button:last-child{
+	margin: -5px 0;
+}
+.deleteItemLinkBlock{
+	text-align: center;
+}
+.deleteItemLinkBlock button{
+	background: #4c4c4c;
+	color: #fff;
+	padding: 3px 20px;
+	font-size: 18px;
+	transition: .2s all linear;
+	cursor: pointer;
+}
+.deleteItemLinkBlock button:hover{
+	background: #000;
+	color: #ffeec0;
+}

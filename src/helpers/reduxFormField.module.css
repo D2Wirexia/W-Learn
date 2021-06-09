@@ -1,0 +1,23 @@
+.inputBlock{
+
+	width: 350px;
+	margin: 10px 0;
+	position: relative;
+}
+.inputBlock label{
+	margin-bottom: 5px;
+	font-size: 18px;
+	color: #6592d6;
+	width: 250px;
+	height: 30px;
+	align-items: center;
+	display: flex;
+	padding-left: 10px;
+	z-index: -1;
+	font-weight: 600;
+}
+.inputBlock input{
+	height: 30px;
+	background: transparent;
+	width: 350px;
+}

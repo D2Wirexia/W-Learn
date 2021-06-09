@@ -1,0 +1,16 @@
+.container{
+	height: calc(100vh - 300px);
+	width: 100%;
+	background: #262626;
+}
+.chevron_down{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 50px;
+	cursor: pointer;
+}
+.chevron_down i{
+	color: #fff;
+	font-size: 62px;
+}

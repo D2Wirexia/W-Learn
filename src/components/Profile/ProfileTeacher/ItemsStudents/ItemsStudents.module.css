@@ -1,0 +1,55 @@
+.container{
+	position: absolute;
+	width: calc(100% - 300px);
+}
+.head{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.title{
+	font-size: 24px;
+	margin: 20px 0 0 20px;
+}
+.search button{
+	cursor: pointer;
+}
+.itemsStudents{
+	margin-top: 30px;
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.item{
+	width: 200px;
+	background: #EEEEEE;
+	border: 2px solid #000;
+	margin: 0 8px 8px;
+}
+.photo{
+	width: 160px;
+	height: 160px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.photo img{
+	width: 100%;
+	height: 100%;
+}
+.name{
+	font-weight: 700;
+	font-size: 22px;
+	text-align: center;
+	padding: 10px;
+
+}
+.btnMessage{
+	text-align: center;
+	padding: 15px;
+}
+.btnMessage button{
+	background: #FFCC66;
+	padding: 5px 15px;
+	font-size: 22px;
+	cursor: pointer;
+}

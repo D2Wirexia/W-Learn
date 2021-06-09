@@ -1,0 +1,163 @@
+.container{
+	height: 100vh;
+	background: #f8f8f8;
+}
+.title {
+	position: relative;
+	margin-bottom: .5rem;
+	text-align: center;
+}
+.title h1 {
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	padding: .5rem 1.5rem;
+	border: .125rem solid #6a1b9a;
+	background: #6a1b9a;
+	color: #fff;
+}
+.subsribesBlock{
+	display: flex;
+	justify-content: space-between;
+	width: 900px;
+	margin: 50px auto 0;
+}
+.item{
+	background: #4c4c4c;
+	width: 280px;
+	box-shadow: 1px 1px 5px #000;
+	text-align: center;
+}
+.countLesson{
+	color: #fff;
+	font-size: 24px;
+	font-weight: 600;
+	padding: 15px;
+}
+.banner{
+	margin: 0 auto;
+	height: 250px;
+	width: 250px;
+	padding-bottom: 10px;
+}
+.banner img{
+	height: 100%;
+	width: 100%;
+}
+.sale{
+	color: #FF0000;
+	height: 20px;
+	font-size: 18px;
+	padding: 10px;
+}
+.cost{
+	color: #f6ff29;
+	font-weight: 700;
+	text-shadow: 1px 1px 3px #f9ff84;
+	font-size: 27px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.arrangeSubscribeBtn{
+	padding: 0 20px 20px 20px;
+	text-align: center;
+
+}
+.arrangeSubscribeBtn button{
+	background: #eeeb36;
+	color: #393939;
+	cursor: pointer;
+	font-size: 26px;
+	padding: 5px 15px;
+	text-transform: uppercase;
+	font-family: "Times New Roman";
+	box-shadow: inset 1px 1px 3px #fff, inset -1px -1px 3px #fff,
+	1px 1px 3px #fff,  -1px -1px 3px #fff;
+	transition: .2s all linear;
+}
+.arrangeSubscribeBtn button:hover{
+	background: #fffc3a;
+	color: #000;
+	box-shadow: 1px 1px 13px #fffc3a,  -1px -1px 13px #fffc3a;
+}
+.chooseCountLessons{
+	width: 900px;
+	background: #4c4c4c;
+	margin: 50px auto 0;
+	border-radius: 0 0 30% 30%;
+	box-shadow: 1px 1px 5px #000;
+	text-shadow: 1px 1px 2px #000;
+}
+.chooseCountLessons h2{
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+}
+.inputBlock{
+text-align: center;
+
+}
+.inputBlock span{
+	font-size: 22px;
+	color: #fff;
+	padding: 0 20px;
+}
+.inputBlock input{
+	width: 300px;
+	font-size: 22px;
+}
+
+
+
+.wrapper {
+	margin: 20px auto 0;
+	width: 500px;
+	padding-top: 20px;
+	text-align: center;
+}
+.wrapper label {
+	display: block;
+	left: 0;
+	top: 0;
+	position: relative;
+	width: 500px;
+	height: 40px;
+	z-index: 10;
+	line-height: 40px;
+	font-weight: bold;
+	background: #074538;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	cursor: pointer;
+	border-radius: 30px;
+}
+.wrapper label:after {
+	content: "ИНДИВИДУАЛЬНЫЕ";
+	width: 250px;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	background: #00CCFF;
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-moz-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	-o-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	cursor: pointer;
+	border-radius: 30px;
+}
+.checkbox {
+	display: none;
+}
+:checked + label {
+	left: 0;
+}
+:checked + label:after {
+	left: 250px;
+	background: #FC6666;
+	content: "ГРУПОВЫЕ";
+}

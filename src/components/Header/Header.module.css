@@ -1,0 +1,107 @@
+.container{
+	background: #262626;
+}
+.header{
+	display: flex;
+	max-width: 1200px;
+	min-width: 700px;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+.logo{
+	height: 300px;
+}
+.logo img{
+	height: 100%;
+}
+.navigations{
+	padding-right: 20px;
+}
+.arr_btn_sing{
+	display: flex;
+	margin-top: 30px;
+	justify-content: flex-end;
+}
+.btn_sing{
+	padding: 5px;
+}
+.btn_sing button{
+	font-size: 20px;
+	width: 120px;
+	cursor: pointer;
+	padding: 10px 15px;
+	background: #f2f2f2;
+	font-family: Roboto;
+	box-shadow: 1px 1px 3px #fff,  -1px -1px 3px #fff;
+}
+.menu{
+	display: flex;
+	margin-top: 80px;
+}
+.menu_element{
+	padding: 20px;
+}
+.menu_element a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 26px;
+	border-bottom: 2px solid #fff;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.menu_element a.active{
+	color: #f6ff29;
+	border-bottom: 2px solid  #f6ff29;
+}
+.logout{
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+}
+.logout a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 32px;
+	display: flex;
+	align-items: center;
+	transition: .2s all linear;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.logout a:hover{
+	color: #f6ff29;
+	transform: scale(1.05);
+}
+.logout a i{
+	padding-left: 10px;
+}
+.myAcc a{
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	text-decoration: none;
+}
+.nameAcc{
+	color: #fff;
+	font-size: 21px;
+	display: flex;
+	align-items: center;
+	padding-right: 10px;
+}
+.photoAcc{
+	width: 50px;
+	height: 50px;
+
+}
+.photoAcc img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.downLine{
+	width: 100%;
+	height: 2px;
+	background: #d4d4d4;
+	opacity: .6;
+}
