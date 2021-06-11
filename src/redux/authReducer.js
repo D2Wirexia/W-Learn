@@ -15,22 +15,7 @@ const ADD_RESULT_TEST_LESSON = 'ADD_RESULT_TEST_LESSON'
 const SET_WISH_SUBSCRIBE = 'SET_WISH_SUBSCRIBE'
 
 let initialState = {
-	me: {
-		userId: 2,
-		email: 'Hanna@gmail.com',
-		password: 'h1',
-		name: 'Анна',
-		age: 22,
-		status: 'teacher',
-		photo: {
-			presentationPhoto: presentationPhotoAnna,
-			avatar: avatarAnna
-		},
-		language: 'English',
-		aboutMe: ['Филолог', 'Бьютифул леди', 'Свободно владею Английским', 'большой опыт', '*что-то ещё*'],
-		teacher: null,
-		subscribe: null,
-	},
+	me: null,
 	myStudents: null,
 	messageWithMe: null,
 	showMessageWithUserById: null,
@@ -111,7 +96,7 @@ export const singInThunk = (email, password) => async (dispatch, getState) => {
 export const registerNewUserThunk = (photo, email, password, name, age) => (dispatch, getState) => {
 	const allUsers = getState().sortReducer.users
 	const newUser = {
-		userId:  allUsers.length,
+		userId:  allUsers.length + 1,
 		email: email,
 		password: password,
 		name: name,
@@ -122,10 +107,20 @@ export const registerNewUserThunk = (photo, email, password, name, age) => (disp
 			avatar: photo
 		},
 		language: '',
-		aboutMe: null,
-		teacher: null,
-		subscribe: null,
-		success: null,
+
+		teacher: [],
+		subscribe: {
+			isActive: null,
+			typeSubscribe: null,
+			startSub: null,
+			endSub: null,
+			course: [],
+			successCourse: [],
+			countLessonsSolo: 0,
+			countLessonsParty: 0,
+			nextLesson: null
+		},
+
 	}
 	dispatch(registerNewUser(newUser))
 	dispatch(addNewUser(newUser))

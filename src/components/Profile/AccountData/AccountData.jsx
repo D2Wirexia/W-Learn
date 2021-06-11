@@ -32,7 +32,7 @@ const AccountData = ({myAccount}) => {
 					 <div>You subscribe: {myAccount.subscribe && myAccount.subscribe.isActive ? 'active' : 'disabled'}</div>
 					 <div>Индивидуальных занятий: {myAccount.subscribe && myAccount.subscribe.countLessonsSolo ? myAccount.subscribe.countLessonsSolo : 0} урок(-ов)</div>
 					 <div>Груповых занятий: {myAccount.subscribe && myAccount.subscribe.countLessonsParty ? myAccount.subscribe.countLessonsParty : 0} урок(-ов)</div>
-					 <div>Ближайшее занятие: <span>{myAccount.subscribe.nextLesson || 'нету занятий'}</span></div>
+					 <div>Ближайшее занятие: <span>{(myAccount.subscribe && myAccount.subscribe.nextLesson) || 'нету занятий'}</span></div>
 				 </div>}
 				 {myAccount.status === 'teacher' && <div className={style.teacher}>
 					 <div>Language: {myAccount.language}</div>
