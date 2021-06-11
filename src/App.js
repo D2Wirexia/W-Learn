@@ -13,7 +13,6 @@ const RegistrationsContainer = React.lazy(() => import('./components/Registratio
 const AppContainer = () => {
    const dispatch = useDispatch()
    dispatch(filterUsers())
-
    return(
        <>
           <Route exact path='/' render={withSuspense(MainPage)}/>

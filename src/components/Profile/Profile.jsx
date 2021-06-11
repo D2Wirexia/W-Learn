@@ -45,7 +45,7 @@ const Profile = () => {
 				 </div>
 				 <div>
 					 <Switch>
-						 <Route exact path={'/profile/' + myAccount.userId} render={() => <AccountData myAccount={myAccount}/>}/>
+						 <Route path={'/profile/' + myAccount.userId} render={() => <AccountData myAccount={myAccount}/>}/>
 						 <Route exact path="/profile/my_course"
 								  render={() => <Course myAccount={myAccount}
 														setShowNowCourse={setShowNowCourse}
@@ -65,6 +65,7 @@ const Profile = () => {
 						 <Route exact path="/profile/subscribe" render={() => <MySubscribe myAccount={myAccount}/>}/>
 						 <Route exact path="/profile/subscribe/activation" render={() => <SubscribeActivation myAccount={myAccount}/>}/>
 						 <Route path="/profile/settings" render={() => <Settings myAccount={myAccount}/>}/>
+						 <Route path="/profile/support" render={() => <div/>}/>
 					 </Switch>
 				 </div>
 			 </div>

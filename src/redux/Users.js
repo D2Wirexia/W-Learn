@@ -65,12 +65,13 @@ export const users = [
 		subscribe: {
 			isActive: true,
 			typeSubscribe: 6,
-			startSub: '2021-05-25T10:46:30.922Z',
-			endSub: '2021-08-25T10:46:30.922Z',
+			startSub: '05/09/2021',
+			endSub: '11/09/2021',
 			course: ['English', 'Slovak'],
 			successCourse: [[90], []],
 			countLessonsSolo: 2,
 			countLessonsParty: 7,
+			nextLesson: '06/11/2021 (12:45)'
 		},
 	},
 	{
@@ -92,9 +93,10 @@ export const users = [
 			startSub: '2021-05-25T10:46:30.922Z',
 			endSub: '2021-08-25T10:46:30.922Z',
 			course: ['English', 'Slovak'],
-			successCourse: [[], []],
+			successCourse: [[], [12]],
 			countLessonsSolo: 0,
 			countLessonsParty: 2,
+			nextLesson: null
 		},
 	},
 	{
@@ -119,6 +121,7 @@ export const users = [
 			successCourse: [],
 			countLessonsSolo: 0,
 			countLessonsParty: 0,
+			nextLesson: null
 		},
 	},
 ]

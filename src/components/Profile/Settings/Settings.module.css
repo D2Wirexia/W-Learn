@@ -23,16 +23,16 @@
 	font-size: 22px;
 
 }
-.forma div{
+.formaInput{
 	margin: 10px 0;
 	display: flex;
 	flex-direction: column;
 }
-.forma div textarea{
+.loadImg textarea{
 	width: 300px;
 	resize: none;
 }
-.forma div input{
+.formaInput input{
 	width: 300px;
 	font-size: 20px;
 }
@@ -45,4 +45,13 @@
 	padding: 5px 20px;
 	letter-spacing: .2rem;
 	cursor: pointer;
+}
+.loadImg{
+	display: flex;
+	align-items: center;
+}
+.loadImg input[type='file'] {
+	width: 165px;
+	color: transparent;
+	margin-left: 10px;
 }

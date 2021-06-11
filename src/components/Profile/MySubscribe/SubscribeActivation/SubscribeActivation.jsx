@@ -34,6 +34,7 @@ const SubscribeActivation = ({myAccount}) => {
         fontSize: '24px'
     }
     if (myAccount === null) return <Redirect to='/login'/>
+    if(myAccount.status === 'teacher') return <Redirect to={'/profile/' + myAccount.userId}/>
     return (
         <div className={style.container}>
             {((!valueLanguage && formBtnIsActive) && getSubscribeMonth) && <div style={error}>Выберите язык курса</div>}

@@ -7,6 +7,7 @@ const CHANGE_SETTINGS_PROFILE = 'CHANGE_SETTINGS_PROFILE'
 const SET_SUBSCRIBE = 'SET_SUBSCRIBE'
 const NEW_USER = 'NEW_USER'
 const SET_WISH_LESSON = 'SET_WISH_LESSON'
+const ADD_DATE_LESSON = 'ADD_DATE_LESSON'
 
 let initialState = {
 	users: users,
@@ -82,6 +83,22 @@ const sortReducer = (state = initialState, action) => {
 					return el
 				})
 			}
+		case ADD_DATE_LESSON:
+			return {
+				...state,
+				users: state.users.map(el => {
+					if(el.userId === action.id){
+						return {
+							...el,
+							subscribe: {
+								...el.subscribe,
+								nextLesson: action.date
+							}
+						}
+					}
+					return el
+				})
+			}
 		default:
 			return state
 	}
@@ -96,7 +113,7 @@ const setSubscribe = (id, subscribe, teacher, course, lessons, typeLessonKey) =>
 	type: SET_SUBSCRIBE, id, subscribe, teacher, course, lessons, typeLessonKey})
 export const addNewUser = (data) => ({type: NEW_USER, data})
 const setWishLessons = (id, typeLessonKey, lessons) => ({type: SET_WISH_LESSON, id, typeLessonKey, lessons})
-
+const addDateLesson = (id, date) => ({type: ADD_DATE_LESSON, id, date})
 
 export const filterUsers = () => (dispatch, getState) => {
 	const allUsers = getState().sortReducer.users
@@ -112,14 +129,18 @@ export const changeSettingsProfileThunk = (photo, name, age, password) => (dispa
 export const setSubscribeThunk = (typeSubscribe, course, lessons, typeLesson) => (dispatch, getState) => {
 	const me = getState().authReducer.me.userId
 	const typeLessonKey = typeLesson === 'Индивидуальное' ? 'countLessonsSolo' : 'countLessonsParty'
-
-	const nowDate = Date()
-	//const endDate = nowDate.setMonth(nowDate.getMonth() + typeSubscribe)
+	const nowDate = new Date()
+	const day = nowDate.getDate()
+	const monthNow = nowDate.getMonth() + 1
+	const year = nowDate.getFullYear()
+	const monthFinish = nowDate.getMonth() + 1 + typeSubscribe
+	const dateStartSub = monthNow + '/' + day + '/' + year
+	const dateEndSub = monthFinish + '/' + day + '/' + year
 	const subscribe = course !== '' && {
 		isActive: true,
 		typeSubscribe: typeSubscribe,
-		startSub: nowDate,
-		endSub: typeSubscribe,
+		startSub: dateStartSub,
+		endSub: dateEndSub,
 	}
 	const teacher = course === 'English' ? 2 : 3
 	dispatch(setSubscribe(me, subscribe, teacher, course ? course : null, lessons, typeLessonKey))
@@ -130,6 +151,11 @@ export const setWishLessonsThunk = (typeLesson, bonusLesson) => (dispatch, getSt
 	const typeLessonKey = typeLesson === 'Индивидуальное' ? 'countLessonsSolo' : 'countLessonsParty'
 	dispatch(setWishLessons(me, typeLessonKey, bonusLesson))
 	dispatch(requestChangedProfileThunk())
+}
+
+export const addDateLessonThunk = (id, date) => (dispatch) => {
+	dispatch(addDateLesson(id, date))
+	dispatch(setMyStudentsThunk())
 }
 
 export default sortReducer

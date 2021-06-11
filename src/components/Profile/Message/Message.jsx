@@ -19,7 +19,7 @@ const Message = ({myAccount}) => {
     if (showMessageWithUserById === null) {
         dispatch(setShowMessageWithUserById(Number(userWhoMessageWithMe[0])))
     }
-    if (showMessageWithUserById !== null && !userWhoMessageWithMe.includes(String(showMessageWithUserById))) {
+    if (showMessageWithUserById !== null && showMessageWithUserById && showMessageWithUserById !== 'NaN' && !userWhoMessageWithMe.includes(String(showMessageWithUserById))) {
         const keyRoom = String(myAccount.userId + '&' + showMessageWithUserById)
         dispatch(createChatRoom(keyRoom))
         dispatch(getRoomsMessageWithMeThunk())
