@@ -53,7 +53,7 @@ const sortReducer = (state = initialState, action) => {
 							subscribe: {
 								...el.subscribe,
 								successCourse: el.subscribe === null ? [[]] : [...el.subscribe.successCourse, []],
-								course: action.course !== null && el.subscribe !== null ? [...el.subscribe.course, action.course] : [...el.subscribe.course],
+								course: action.course !== null ? [...el.subscribe.course, action.course] : [...el.subscribe.course],
 								[action.typeLessonKey]: Number(el.subscribe[action.typeLessonKey]) + Number(action.lessons),
 								...action.subscribe
 							}
