@@ -15,7 +15,22 @@ const ADD_RESULT_TEST_LESSON = 'ADD_RESULT_TEST_LESSON'
 const SET_WISH_SUBSCRIBE = 'SET_WISH_SUBSCRIBE'
 
 let initialState = {
-	me: null,
+	me: {
+		userId: 2,
+		email: 'Hanna@gmail.com',
+		password: 'h1',
+		name: 'Анна',
+		age: 22,
+		status: 'teacher',
+		photo: {
+			presentationPhoto: presentationPhotoAnna,
+			avatar: avatarAnna
+		},
+		language: 'English',
+		aboutMe: ['Филолог', 'Бьютифул леди', 'Свободно владею Английским', 'большой опыт', '*что-то ещё*'],
+		teacher: null,
+		subscribe: null,
+	},
 	myStudents: null,
 	messageWithMe: null,
 	showMessageWithUserById: null,

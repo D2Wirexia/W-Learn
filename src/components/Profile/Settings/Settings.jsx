@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import style from './Settings.module.css'
 import useInput from "../../customHook/useInput/useInput";
 import {useDispatch} from "react-redux";

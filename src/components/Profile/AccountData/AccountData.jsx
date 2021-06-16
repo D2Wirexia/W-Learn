@@ -5,20 +5,20 @@ import ItemsStudents from "../ProfileTeacher/ItemsStudents/ItemsStudents";
 
 const AccountData = ({myAccount}) => {
 	const myStudents = useSelector(state => state.authReducer.myStudents)
-	const getNextLesson = () => {
+	const getNextLesson = (arr = []) => {
 		const date = new Date()
 		let comparisonDate = []
-		myStudents.forEach(el => {
+		arr.forEach(el => {
 			const time = Date.parse(date) - Date.parse(el.subscribe.nextLesson)
 			comparisonDate.push(time)
 		})
 		const sortTime = comparisonDate.filter(el => el < 0)
 		const minDate = Math.max.apply(null, sortTime)
 		const index = comparisonDate.indexOf(minDate)
-		if(typeof index === 'number') return myStudents[index]?.subscribe.nextLesson
+		if(typeof index === 'number') return arr[index]?.subscribe.nextLesson
 		return null
 	}
-	useEffect(()=>getNextLesson())
+	useEffect(()=>getNextLesson(myStudents),[myStudents])
 	return (
 		 <div className={style.container}>
 			 <div className={style.profile}>
@@ -37,7 +37,7 @@ const AccountData = ({myAccount}) => {
 				 {myAccount.status === 'teacher' && <div className={style.teacher}>
 					 <div>Language: {myAccount.language}</div>
 					 <div>Count you students: {myStudents.length}</div>
-					 <div>Ближайшее занятие: <span>{getNextLesson() || 'нету занятий'}</span></div>
+					 <div>Ближайшее занятие: <span>{getNextLesson(myStudents) || 'нету занятий'}</span></div>
 				 </div>}
 				 {myAccount.status === 'admin' && <div className={style.admin}>
 				 </div>}

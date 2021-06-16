@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import UserChat from "./UserChat/UserChat";
 import {useDispatch, useSelector} from "react-redux";
 import Chat from "./Chat/Chat";
@@ -16,14 +16,16 @@ const Message = ({myAccount}) => {
         const myRoom = Object.keys(messageWithMe).filter(e => e.split('').includes(String(showMessageWithUserById)))
         return myRoom[0]
     }
-    if (showMessageWithUserById === null) {
-        dispatch(setShowMessageWithUserById(Number(userWhoMessageWithMe[0])))
-    }
-    if (showMessageWithUserById !== null && showMessageWithUserById && showMessageWithUserById !== 'NaN' && !userWhoMessageWithMe.includes(String(showMessageWithUserById))) {
-        const keyRoom = String(myAccount.userId + '&' + showMessageWithUserById)
-        dispatch(createChatRoom(keyRoom))
-        dispatch(getRoomsMessageWithMeThunk())
-    }
+    useEffect(()=>{
+        if (showMessageWithUserById === null) {
+            dispatch(setShowMessageWithUserById(Number(userWhoMessageWithMe[0])))
+        }
+        if (showMessageWithUserById !== null && showMessageWithUserById && showMessageWithUserById !== 'NaN' && !userWhoMessageWithMe.includes(String(showMessageWithUserById))) {
+            const keyRoom = String(myAccount.userId + '&' + showMessageWithUserById)
+            dispatch(createChatRoom(keyRoom))
+            dispatch(getRoomsMessageWithMeThunk())
+        }
+    })
     return (
         <div className={style.container}>
             <UserChat myId={myAccount.userId} messageWithMe={messageWithMe}

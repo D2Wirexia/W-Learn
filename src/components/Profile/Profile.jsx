@@ -20,12 +20,14 @@ const Profile = () => {
 	const myAccount = useSelector(state => state.authReducer.me)
 	const englishCourse = useSelector(state => state.courseReducer.english)
 	const slovakCourse = useSelector(state => state.courseReducer.slovak)
-	if(myAccount?.status){
-		dispatch(setMyStudentsThunk())
-		dispatch(getRoomsMessageWithMeThunk())
-	}
-	const chooseCourse = () => {
 
+		if(myAccount){
+			dispatch(setMyStudentsThunk())
+			dispatch(getRoomsMessageWithMeThunk())
+		}
+
+
+	const chooseCourse = () => {
 		if(myAccount.language === 'English' || myAccount.subscribe?.course[showNowCourse] === 'English'){
 			return englishCourse
 		}

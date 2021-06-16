@@ -19,12 +19,14 @@ const SubscribeActivation = ({myAccount}) => {
     const [bonusLessonCheckBox, setBonusLessonCheckBox] = useState(getChoiceValueSubscribeLesson().isCheck)
     const [typeLesson, setTypeLesson] = useState(getChoiceValueSubscribeLesson().view)
     const [getSubscribeMonth, setGetSubscribeMonth] = useState(true)
+    useEffect(()=>{
+        myAccount.subscribe.course.length === 2 && setGetSubscribeMonth(false)
+    }, [myAccount.subscribe.course.length])
     const costBonusLessons = getTotalCost(Number(countBonusLesson), typeLesson === 'Индивидуальное' ? costLessonSolo : costLessonParty)
     useEffect(() => {
         const result = [...subscribeState].filter(el => Number(el.countLessons) === Number(valueDuration))
         setValueCostCourse(result[0].cost)
     }, [subscribeState, valueDuration])
-
     const pushSubscribeOnUser = () => {
         dispatch(setSubscribeThunk(valueDuration, valueLanguage, countBonusLesson, typeLesson))
     }
